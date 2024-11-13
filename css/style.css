@@ -623,6 +623,11 @@ a:hover .tooltip,
    cursor: pointer;
 }
 
+.error-message {
+   color: red;
+   font-size: 20px;
+}
+
 /* Renposive */
 @media screen and (max-width: 1200px) {
    html {
