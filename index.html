@@ -305,19 +305,22 @@
             <section class="section contact active">
                 <h2 class="title">Contact</h2>
                 <div id="app" class="contact-wrapper">
-                    <form @submit.prevent="handleSubmit" class="contact-form">
+                    <form action="https://formsubmit.co/3e33432b8211fbeffd45e2029786504d" method="POST"
+                        class="contact-form">
                         <h3>Let's Work Together!</h3>
                         <div class="field-box">
-                            <input type="text" v-model="full_name" placeholder="Full Name" required>
-                            <input type="email" v-model="email" placeholder="Email Address" required>
-                            <input type="number" v-model="phone_number" placeholder="Phone Number" required>
-                            <input type="text" v-model="affair" placeholder="Asunto" required>
-                            <textarea v-model="message" placeholder="Your Message" required></textarea>
+                            <input type="text" name="full_name" placeholder="Full Name" required>
+                            <input type="email" name="email" placeholder="Email Address" required>
+                            <input type="number" name="phone_number" placeholder="Phone Number" required>
+                            <input type="text" name="affair" placeholder="Asunto" required>
+                            <textarea name="message" placeholder="Your Message" required></textarea>
                         </div>
+                        <!-- Hidden inputs for FormSubmit -->
+                        <input type="hidden" name="_next" value="https://portafolio-personal-3-d.vercel.app">
+                        <input type="hidden" name="_captcha" value="false">
                         <div class="contact-btn">
                             <button type="submit" class="btn">Send Message</button>
                         </div>
-                        <div v-if="errorMessage" class="error-message">{{ errorMessage }}</div>
                     </form>
                 </div>
             </section>
